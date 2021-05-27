@@ -14,6 +14,7 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
+import os
 
 # -- Project information -----------------------------------------------------
 
@@ -24,6 +25,9 @@ author = 'SrainApp'
 # The full version, including alpha/beta/rc tags
 release = '2.0-rc0'
 
+# -- Enviroment information -----------------------------------------------------
+
+CI = os.environ.get('CI') is not None
 
 # -- General configuration ---------------------------------------------------
 
@@ -31,7 +35,11 @@ release = '2.0-rc0'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    'sphinxcontrib.plantuml',
 ]
+
+if not CI:
+    extensions.append('sphinxnotes.snippet.ext')
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']

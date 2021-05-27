@@ -7,6 +7,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    - name: Install dependencies
+      run: |
+        sudo apt-get update;
+        sudo apt-get install plantuml
     - name: Checkout
       uses: actions/checkout@master
       with:
