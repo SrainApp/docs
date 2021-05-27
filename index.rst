@@ -10,6 +10,8 @@ Welcome to Srain's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   arch/index
+
 
 
 Indices and tables
