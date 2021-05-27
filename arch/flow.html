@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Flow &#8212; Srain 2.0-rc0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Objects" href="obj.html" />
+    <link rel="prev" title="Data Structure" href="ds.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="flow">
+<h1>Flow<a class="headerlink" href="#flow" title="Permalink to this headline">¶</a></h1>
+<dl class="field-list simple">
+<dt class="field-odd">date</dt>
+<dd class="field-odd"><p>2021-02-21</p>
+</dd>
+</dl>
+<p>Known flows:</p>
+<ul class="simple">
+<li><p>Login -&gt; Flow</p></li>
+<li><p>Contact -&gt; Entity</p></li>
+<li><p>Inspect -&gt; Entity</p></li>
+</ul>
+<section id="login">
+<h2>Login<a class="headerlink" href="#login" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>[A] App run</p></li>
+<li><p>[A] Select Messenger (list <cite>*.so</cite> )</p></li>
+<li><p>[A] Load so and create Messenger</p></li>
+<li><p>[A] Start <cite>SrnFlow *login</cite></p></li>
+<li><p>[M] Login flow logical</p></li>
+<li><p>[A] Start <cite>SrnFlow *contact</cite></p></li>
+</ol>
+</section>
+<section id="contact">
+<h2>Contact<a class="headerlink" href="#contact" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>[A] Start <cite>SrnFlow *contact</cite></p></li>
+<li><p>[M] Contact flow logical</p></li>
+<li><p>[M] Create SrnXXXBuffer(SrnEen)</p></li>
+</ol>
+</section>
+<section id="message">
+<h2>Message<a class="headerlink" href="#message" title="Permalink to this headline">¶</a></h2>
+<section id="send-text">
+<h3>Send Text<a class="headerlink" href="#send-text" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>[M] Register text entry signal handler</p></li>
+<li><p>[A] User type in text entry</p></li>
+<li><p>[M] Read message from text entry</p></li>
+<li><p>[M] Sending</p></li>
+<li><p>[A] Add a pending message</p></li>
+<li><p>[M] Sent</p></li>
+<li><p>[A] Update message state</p></li>
+</ol>
+</section>
+<section id="send-media">
+<h3>Send Media<a class="headerlink" href="#send-media" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>[M] Register a button</p></li>
+<li><p>[A] User click the button</p></li>
+<li><p>[M] Sending</p></li>
+<li><p>[A] Add a pending message</p></li>
+<li><p>[M] Sent</p></li>
+<li><p>[A] Update message state</p></li>
+</ol>
+</section>
+<section id="recv-text">
+<h3>Recv text<a class="headerlink" href="#recv-text" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>[M] Recv callback</p></li>
+<li><p>[A] Add message to buffer</p></li>
+</ol>
+</section>
+<section id="recv-media">
+<h3>Recv media<a class="headerlink" href="#recv-media" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>[M] Recv callback</p></li>
+<li><p>[A] Add message to buffer</p></li>
+<li><p>[M] Recv done</p></li>
+<li><p>[A] Update message state</p></li>
+</ol>
+</section>
+</section>
+<section id="user">
+<h2>User<a class="headerlink" href="#user" title="Permalink to this headline">¶</a></h2>
+<section id="init-member-list">
+<h3>Init member list<a class="headerlink" href="#init-member-list" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Srain</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Srain Architecture Proposal</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ds.html">Data Structure</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="obj.html">Objects</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">Srain Architecture Proposal</a><ul>
+      <li>Previous: <a href="ds.html" title="previous chapter">Data Structure</a></li>
+      <li>Next: <a href="obj.html" title="next chapter">Objects</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, SrainApp.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.0.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/arch/flow.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
