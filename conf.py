@@ -36,6 +36,7 @@ CI = os.environ.get('CI') is not None
 # ones.
 extensions = [
     'sphinxcontrib.plantuml',
+    'sphinx.ext.githubpages',
 ]
 
 if not CI:
